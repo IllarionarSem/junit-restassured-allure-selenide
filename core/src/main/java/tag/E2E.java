@@ -9,6 +9,6 @@ import java.lang.annotation.Target;
 
 @Target({ElementType.TYPE, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
-@Tag("e2e")
+@Tag(constant.Tag.E2E)
 public @interface E2E {
 }

@@ -7,7 +7,7 @@ import org.aeonbits.owner.Config;
         {
                 //"system:properties",
                 //"system:env",
-                //"classpath:driverconfigs/${env}.properties"
+                //"classpath:driverconfigs/ui.${env}.properties"
                 "classpath:driverconfigs/ui.staging.properties"
         }
 )

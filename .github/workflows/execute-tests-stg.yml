@@ -1,0 +1,11 @@
+name: "Full Test Suite"
+on:
+  workflow_dispatch:
+
+jobs:
+  all-tests:
+    uses: IllarionarSem/GitHub-actions/.github/workflows/setup-java-test-env.yml@main
+    with:
+      gradle-task: test
+      gradle-args: "-Denv=staging"
+
