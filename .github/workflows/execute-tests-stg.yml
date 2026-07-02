@@ -1,6 +1,9 @@
-name: "Full Test Suite"
+name: "[staging] Full Test Suite"
 on:
   workflow_dispatch:
+
+permissions:
+    contents: write
 
 jobs:
   all-tests:
@@ -9,3 +12,10 @@ jobs:
       gradle-task: test
       gradle-args: "-Denv=staging"
 
+  publish-allure:
+    needs: all-tests
+    if: always()
+    uses: IllarionarSem/GitHub-actions/.github/workflows/publish-allure-pages.yml@main
+    with:
+      allure-results-artifact: 'allure-results'
+      report-folder: 'staging-full-test-suite'
