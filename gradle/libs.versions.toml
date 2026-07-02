@@ -1,0 +1,32 @@
+[versions]
+junit-version = "6.1.0"
+rest-assured-version = "6.0.0"
+allure-version = "2.35.2"
+owner-config-manager-version = "1.0.12"
+lombok-version = "1.18.46"
+json-schema-validator-version = "6.0.0"
+faker-version = "1.0.2"
+lombok-plugin-version = "9.5.0"
+aspectj-version = "1.9.25.1"
+allure-plugin-version = "4.1.0"
+slf4j-version = "2.0.17"
+logback-version = "1.5.18"
+selenide-version = "7.16.2"
+
+[libraries]
+slf4jSimple = { module = "org.slf4j:slf4j-simple", version.ref = "slf4j-version" }
+junit = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit-version" }
+restAssured = { module = "io.rest-assured:rest-assured", version.ref = "rest-assured-version" }
+allure = { module = "io.qameta.allure:allure-junit5", version.ref = "allure-version" }
+ownerConfigManager = { module = "org.aeonbits.owner:owner", version.ref = "owner-config-manager-version" }
+lombok = { module = "org.projectlombok:lombok", version.ref = "lombok-version" }
+jsonSchemaValidator = { module = "io.rest-assured:json-schema-validator", version.ref = "json-schema-validator-version" }
+faker = { module = "com.github.javafaker:javafaker", version.ref = "faker-version" }
+aspectj = { module = "org.aspectj:aspectjweaver", version.ref = "aspectj-version" }
+logbackClassic = { module = "ch.qos.logback:logback-classic", version.ref = "logback-version" }
+allureRestAssured = { module = "io.qameta.allure:allure-rest-assured", version.ref = "allure-version" }
+selenide = { module = "com.codeborne:selenide", version.ref = "selenide-version" }
+
+[plugins]
+lombokPlugin = { id = "io.freefair.lombok", version.ref = "lombok-plugin-version" }
+allurePlugin = { id = "io.qameta.allure", version.ref = "allure-plugin-version" }
