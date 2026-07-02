@@ -20,9 +20,12 @@ public class SelenideConfiguration {
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments(
+                "--headless=new",
                 "--no-sandbox",
                 "--disable-dev-shm-usage",
-                "--window-size=1920,1080"
+                "--window-size=1920,1080",
+                "--disable-gpu",
+                "--remote-allow-origins=*"
         );
 
         Configuration.browserCapabilities = options;
