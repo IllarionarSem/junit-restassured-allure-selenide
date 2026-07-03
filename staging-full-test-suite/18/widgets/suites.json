@@ -1,1 +1,0 @@
-{"total":2,"items":[{"uid":"33c5a9923d7084f9b5d2906e4844dcb1","name":"com.toolshop.ui.e2e.FullFlowTest","statistic":{"failed":1,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":1}},{"uid":"a7380a73269983dbd1c779032a59b23d","name":"io.swagger.petstore.api.smoke.SchemaValidationTest","statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1}}]}
