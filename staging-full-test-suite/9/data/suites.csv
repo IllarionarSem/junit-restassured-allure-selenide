@@ -1,3 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","3377","[API] Validate `post PET` response schema","","2026-07-03","passed","2026-07-03","","io.swagger.petstore.api.smoke.SchemaValidationTest","io.swagger.petstore.api.smoke.SchemaValidationTest","testCreatePetResponseSchemaMatchOK"
-"","35208","[UI] Add tool to cart adn check cart","","2026-07-03","failed","2026-07-03","","com.toolshop.ui.e2e.FullFlowTest","com.toolshop.ui.e2e.FullFlowTest","testAddToolToCart"
