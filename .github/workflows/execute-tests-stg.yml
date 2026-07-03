@@ -8,34 +8,9 @@ permissions:
 
 jobs:
   all-tests:
-    uses: IllarionarSem/GitHub-actions/.github/workflows/setup-java-test-env.yml@main
+    uses: IllarionarSem/GitHub-actions/.github/workflows/run-gradle-test-and-publish-report.yml@main
     with:
       gradle-task: test
       gradle-args: "-Denv=staging"
-
-  publish-allure:
-    needs: all-tests
-    if: always()
-    uses: IllarionarSem/GitHub-actions/.github/workflows/publish-allure-pages.yml@main
-    with:
-      allure-results-artifact: 'allure-results'
+      environment: staging
       report-folder: 'staging-full-test-suite'
-
-  summary:
-    needs: [ all-tests, publish-allure ]
-    if: always()
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Add build summary
-        run: |
-          ALLURE_URL="https://illarionarsem.github.io/${{ github.event.repository.name }}/staging-full-test-suite/"
-          
-          echo "## Test run summary" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "| Item | Value |" >> $GITHUB_STEP_SUMMARY
-          echo "|------|-------|" >> $GITHUB_STEP_SUMMARY
-          echo "| Environment | staging |" >> $GITHUB_STEP_SUMMARY
-          echo "| Test job result | ${{ needs.all-tests.result }} |" >> $GITHUB_STEP_SUMMARY
-          echo "| Allure publish result | ${{ needs.publish-allure.result }} |" >> $GITHUB_STEP_SUMMARY
-          echo "| Allure report | [Open report]($ALLURE_URL) |" >> $GITHUB_STEP_SUMMARY
