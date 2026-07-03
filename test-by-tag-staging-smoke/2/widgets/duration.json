@@ -1,0 +1,1 @@
+[{"uid":"89473c6937fae77","name":"[API] Validate `post PET` response schema","time":{"start":1783083582557,"stop":1783083585938,"duration":3381},"status":"passed","severity":"critical"},{"uid":"b59574658488e0f4","name":"[UI] Add tool to cart adn check cart","time":{"start":1783083562710,"stop":1783083582303,"duration":19593},"status":"failed","severity":"normal"}]
