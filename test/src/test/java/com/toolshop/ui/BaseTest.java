@@ -4,5 +4,5 @@ import junitextensions.SelenideExtension;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 @ExtendWith(SelenideExtension.class)
-public class BaseTest {
+public abstract class BaseTest {
 }

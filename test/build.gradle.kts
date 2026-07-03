@@ -40,7 +40,13 @@ dependencies {
 }
 
 tasks.withType<Test>().configureEach {
-    useJUnitPlatform()
+    useJUnitPlatform() {
+        val tag = System.getProperty("tag")
+
+        if (!tag.isNullOrBlank()) {
+            includeTags(tag)
+        }
+    }
 
     systemProperty(
         "env",
